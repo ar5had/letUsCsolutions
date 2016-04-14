@@ -24,21 +24,23 @@
 
 #include <stdio.h>
 #include <math.h>
+
 double f(double x){
 	
 	return(x*x -5*x + 6);
 	
 	
 }
+
 int main()
 {
 	double a,b,c;
+
 	double root;
 	
 	puts("This progrram finds root of equation x*x -5*x +6");
 	
 	puts("Enter the range");
-	
 	
 	scanf("%lf %lf",&a,&b);
 	
@@ -51,7 +53,6 @@ int main()
 			
 				printf("root is %lf\n",a);
 			
-			
 			if (f(b) ==0.0)
 		
 				printf("root is %lf\n",b);
@@ -59,7 +60,6 @@ int main()
 		}
 			
 		else{
-			
 			
 			while(1){
 					
@@ -70,24 +70,24 @@ int main()
 					if(f(a)*f(c)<0)
 					
 						b=c;
+
 					else
 					
 						a=c;
 					
 					if(fabs(f(a))<.001 || fabs(f(b))<.001){
+
 						root=fabs(f(a))<.001?a:b;
+
 						break;
 					}
 				
 			}	//ends while
-				
 		
 		printf("root is %lf",root);		
 				
 		}//ends else
 		
-		
-				
 	}
 	
 	else{
@@ -95,7 +95,6 @@ int main()
 	puts("No roots in this range");	
 		
 	}
-	
 	
 	return 0;
 }

@@ -29,9 +29,12 @@ int main()
 	struct animal{
 		
 		char name[30];
+		
 		int type;
 	};
+
 	int i=0;
+
 	struct animal a={"OCELOT",18};
 	
 	
@@ -49,9 +52,11 @@ int main()
 		
 		
 		if( (18 & bv(i) )== bv(i))
+
 		break;
 		
 		i++;
+
 	}//loop will surely break coz animal will be one of the type 
 	
 	switch(i){
@@ -61,27 +66,33 @@ int main()
 		printf("and canine");
 		
 		break;
+
 		case 1:
 			
 		printf("and feline");
 		
 		break;
+
 		case 2:			
+
 		printf("and cetacean");
 		
 		break;	
 		
 		case 3:			
+
 		printf("and marsupial");
 		
 		break;	
 		
 		
 		default:
+
 		printf("Invalid type");
 			
 	}
 	
 	return 0;
+
 }
 

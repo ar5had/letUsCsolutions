@@ -37,6 +37,7 @@ int main()
 		
 		
 		if(name[i]==' ')
+			
 			words++;
 		
 		i++;
@@ -54,27 +55,39 @@ int main()
 		while(name[i]!=0){
 		
 			if(name[i] == ' ')
+
 			words--;
 			
 			if(i==0 || ( (name[i-1] == ' ') && words>1 ))
 			{
+
 				acro[j]=name[i];
+
 				j++;
+
 				acro[j]=' ';
+
 				j++;
+
 			}
+
 			else if( words==1 && (name[i]!= ' '))
 			{
+
 				acro[j]=name[i];
+
 				j++;
+
 			}
-			
+
 			else;
 			
 			i++;
 			
 		}//ends while loop
+		
 		acro[j]=0;
+
 	}//ends else
 	
 	puts(acro);
@@ -91,6 +104,7 @@ int main()
 		
 		
 		if(*p==' ')
+
 			count++;
 			
 		p++;
@@ -110,17 +124,14 @@ int main()
 			p++;
 			
 		
-		p++;
-		
-		count--;
+			p++;
+			
+			count--;
 		
 	}
 	
 	printf("%s",p);
 	
-	
-
-
 	return 0;
 }
 

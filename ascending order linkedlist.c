@@ -25,11 +25,11 @@
 #include <stdio.h>
 #include <malloc.h>
 struct node{
+	
 	int value;
 	
 	struct node* link;
-	
-	
+		
 	};
 	
 struct node *q,*front;
@@ -50,18 +50,11 @@ int main()
 	
 	input(30);
 	
-	
 	input(10);
-	
-	
 	
 	input(100);
 	
-	
 	display();
-	
-	
-	
 		
 	return 0;
 }
@@ -71,11 +64,7 @@ void input(int val){
 	
 		struct node *y,*x,*w=(struct node* )malloc(sizeof(struct node));
 		
-		
-		
 		w->value=val;
-		
-		
 		
 		if(q==NULL){
 			
@@ -84,25 +73,27 @@ void input(int val){
 			q=w;
 			
 			front=q;
-				
 			
 		}
 		
-		
-		
 		else{
 			
-			
-			
 			while(q!=NULL )
+
 				{
 					
 					if(q->value > w->value){
+
 							int temp=q->value;
+
 							x=q->link;	
+
 							q->link=w;
+
 							q->value=w->value;
+
 							w->value=temp;
+
 							w->link=x;
 								
 							break;
@@ -117,21 +108,24 @@ void input(int val){
 				
 		}
 	
-	
-	
 }
 
 void display(){
 	
 		int i=0;
+
 		struct node* w;
 		
 		w=q;
+
 		while(w!=NULL){
 			
 		printf("%d \n",w->value);
+
 		w=w->link;	
+
 		i++;	
+
 		}
 	
 	printf("Totl no of elements are %d \n",i);
